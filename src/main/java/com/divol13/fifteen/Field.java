@@ -35,7 +35,7 @@ class Field extends StackPane {
         for (int x = 0; x < App.WIDTH; x++) {
             for (int y = 0; y < App.HEIGHT ; y++) {
 
-                if ( x == gap_x && y == gap_y) {
+                if (x == gap_x && y == gap_y) {
                     grid[x][y] = null;
                     System.out.println("gap at position [" + x + "," + y + "]");
                     continue;
