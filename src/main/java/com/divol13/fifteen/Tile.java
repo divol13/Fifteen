@@ -9,7 +9,7 @@ import javafx.scene.text.Font;
 import javafx.scene.text.Text;
 
 public class Tile extends StackPane {
-    static final int TILE_SIZE = 200;
+    static int TILE_SIZE;
 
     private Text text;
     private Rectangle rectangle;
@@ -41,15 +41,7 @@ public class Tile extends StackPane {
 
     private void onClicked(MouseEvent mouseEvent) {
         Field field = (Field) getParent();
-        field.check();
-        if(mouseEvent.isAltDown()){
-            System.out.println("ALT");
-            field.swap(this);
-        }
-        else {
-            field.move(this);
-        }
-        //field.check();
+        field.move(this);
     }
 
     public String getText(){
